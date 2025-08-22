@@ -69,7 +69,7 @@ server.on('request',(req,res)=>{
     // 构造请求报文
     var options = {
         "method": req.method,
-        "hostname": "172.29.251.205",
+        "hostname": "",#填入ip
         "port":"443",
         "path": req.url,
         "headers": {
@@ -115,7 +115,7 @@ server.on('request',(req,res)=>{
                      //console.log(tailer);
                     const base64=sha1_to_base64(tailer);
                     const dataBuffer = Buffer.from(base64, 'base64'); //把base64码转成buffer对象，
-                    // path="C://Users//loser//WebstormProjects//c4//demo.jpg";
+                  
                     // fs.writeFile(path, dataBuffer, function(err){//用fs写入文件
                     //     if(err){
                     //         console.log(err);
@@ -135,4 +135,5 @@ server.on('request',(req,res)=>{
 })
 server.listen(4000,()=>{
     console.log("Server has opened......");
+
 })
